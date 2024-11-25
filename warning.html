@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Security Warning</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .warning {
+      background-color: #f2dede;
+      color: #a94442;
+      padding: 20px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .url {
+      word-break: break-all;
+      margin: 20px 0;
+      padding: 10px;
+      background-color: #f8f8f8;
+    }
+  </style>
+</head>
+<body>
+  <div class="warning">
+    <h1>⚠️ Security Warning</h1>
+    <p>The URL you're trying to visit has been detected as potentially malicious:</p>
+    <div class="url" id="maliciousUrl"></div>
+    <p>We recommend not proceeding to this website.</p>
+  </div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const maliciousUrl = urlParams.get('maliciousUrl');
+    document.getElementById('maliciousUrl').textContent = maliciousUrl;
+  </script>
+</body>
+</html>
