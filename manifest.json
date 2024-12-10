@@ -1,27 +1,25 @@
 {
-  "manifest_version": 2,
-  "name": "Malicious URL Detector",
-  "version": "1.0",
-  "description": "Detects malicious URLs by checking against an API",
-  "permissions": [
-    "activeTab",
-    "tabs",
-    "http://34.30.11.83:8000/process-url/",
-    "webNavigation"
-  ],
-  "browser_action": {
-    "default_icon": "Images/icon.png",
-    "default_popup": "popup.html"
-  },
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": true
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_start"
-    }
-  ]
+	"manifest_version": 3,
+	"name": "Malicious URL Detector",
+	"version": "1.0",
+	"description": "Detects malicious URLs by checking against an API",
+	"permissions": ["activeTab", "tabs", "webNavigation"],
+	"host_permissions": [
+		"http://34.55.190.121:8000/process-url/",
+		"http://127.0.0.1/process-url/"
+	],
+	"action": {
+		"default_icon": "Images/icon.png",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"],
+			"run_at": "document_start"
+		}
+	]
 }
