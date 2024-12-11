@@ -3,7 +3,7 @@
 	"name": "Malicious URL Detector",
 	"version": "1.0",
 	"description": "Detects malicious URLs by checking against an API",
-	"permissions": ["activeTab", "tabs", "webNavigation"],
+	"permissions": ["activeTab", "tabs"],
 	"host_permissions": [
 		"http://34.55.190.121:8000/process-url/",
 		"http://127.0.0.1/process-url/"

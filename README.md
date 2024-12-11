@@ -1,4 +1,3 @@
-
 # Malicious URL Detector
 
 Malicious URL Detector is a browser extension designed to enhance your online security by detecting potentially harmful websites. It uses a backend API to analyze URLs and alerts users with a warning when malicious activity is detected.
@@ -43,7 +42,7 @@ Malicious URL Detector is a browser extension designed to enhance your online se
 
 - **Frontend**: JavaScript (content scripts, popup interface).
 - **Backend**: REST API hosted on Google Cloud Platform (GCP).
-- **Browser APIs**: Chrome Extension APIs (e.g., `tabs`, `webNavigation`, `browserAction`).
+- **Browser APIs**: Chrome Extension APIs (e.g., `tabs`, `browserAction`).
 
 ---
 
@@ -65,6 +64,7 @@ malicious-url-detector/
 ## API Endpoint
 
 The extension interacts with the following API:
+
 - **URL**: `http://34.30.11.83:8000/process-url/`
 - **Method**: GET
 - **Query Parameters**:
@@ -75,7 +75,8 @@ The extension interacts with the following API:
 ## Permissions
 
 This extension requests the following permissions:
-- `activeTab`, `tabs`, and `webNavigation`: To analyze URLs and detect navigation events.
+
+- `activeTab`, `tabs`: To analyze URLs and detect navigation events.
 - `<all_urls>`: To monitor all visited websites for potential threats.
 
 ---
@@ -83,6 +84,7 @@ This extension requests the following permissions:
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute:
+
 1. Fork the repository.
 2. Create a new branch:
    ```bash
@@ -103,5 +105,6 @@ Contributions are welcome! If you'd like to contribute:
 ## Contact
 
 For questions or suggestions:
+
 - **Email**: nnrajore@gmail.com
 - **GitHub**: https://github.com/Armidess
